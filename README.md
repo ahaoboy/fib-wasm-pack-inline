@@ -11,7 +11,7 @@ for (let i = 0; i < 10; i++) {
 
 
 ```ts
-import("https://github.com/ahaoboy/fib-wasm-pack-inline/raw/refs/heads/main/dist/index.js")
+import("https://unpkg.com/fib-wasm-pack-inline@latest/dist/index.js")
   .then(({ fib }) => {
     for (let i = 0; i < 10; i++) {
       console.log(fib(i))
