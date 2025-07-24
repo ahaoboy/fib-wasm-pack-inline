@@ -1,0 +1,14 @@
+[package]
+name = "fib"
+version = "0.1.0"
+authors = ["ahaoboy <504595380@qq.com>"]
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2.84"
+
+[profile.release]
+wasm-opt = false

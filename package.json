@@ -1,0 +1,31 @@
+{
+  "name": "fib-wasm-pack-inline",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "author": "ahaoboy",
+  "license": "MIT",
+  "homepage": "https://github.com/ahaoboy/fib-wasm-pack-inline",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahaoboy/fib-wasm-pack-inline.git"
+  },
+  "scripts": {
+    "build": "pnpm run build:wasm && pnpm run build:inline",
+    "build:wasm": "wasm-pack build --target=web --out-dir ./web --release",
+    "build:inline": "wasm-pack-inline ./web -d ./dist --name index"
+  },
+  "keywords": [
+    "fib",
+    "wasm-pack-inline",
+    "wasm",
+    "wasm-pack"
+  ],
+  "dependencies": {
+    "wasm-pack-inline": "^0.1.4"
+  }
+}
